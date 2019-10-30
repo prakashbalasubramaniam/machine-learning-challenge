@@ -1,0 +1,53 @@
+Random Forest Classifier Model Score Comparison
+-----------------------------------------------------------------------------------------------
+Test Train Sample Size % = 20.0, Random State = 42, Stratify = Yes
+Model Train Score = 1.0, Model Test Score = 0.8799142244460328
+Model Tuned Train Score = 1.0, Model Tuned Test Score = 0.8820586132952108
+
+Random Forest Classifier Model Score Comparison
+-----------------------------------------------------------------------------------------------
+Test Train Sample Size % = 40.0, Random State = 42, Stratify = Yes
+Model Train Score = 1.0, Model Test Score = 0.8780836610654272
+Model Tuned Train Score = 1.0, Model Tuned Test Score = 0.8816589202717197
+
+
+Logistic Regression Classifier Model Score Comparison
+-----------------------------------------------------------------------------------------------
+Test Train Sample Size % = 20.0, Random State = 42, Stratify = Yes
+Model Train Score = 0.8090128755364807, Model Test Score = 0.7998570407433881
+Model Tuned Train Score = 0.8220672389127325, Model Tuned Test Score = 0.8205861329521087
+
+Logistic Regression Classifier Model Score Comparison
+-----------------------------------------------------------------------------------------------
+Test Train Sample Size % = 40.0, Random State = 42, Stratify = Yes
+Model Train Score = 0.807105388650453, Model Test Score = 0.8133714694315338
+Model Tuned Train Score = 0.818073438245112, Model Tuned Test Score = 0.8287450840185914
+
+--------
+Summary
+--------
+Based on the score data collected comparing 2 models, the Random Forest Classifier is performing better than Logistic Regression by ~6% more after tuning both
+models through GridSearch.
+At least both models are able to predict exaplanet up to 80+%.
+Further improvement is to consider re-fitting the models with the key features (top 5 > 0.05) mentioned below rather than using all the features.
+
+[(0.13054740952528598, 'koi_fpflag_co'),
+ (0.12942973351112053, 'koi_model_snr'),
+ (0.11931301010947905, 'koi_fpflag_nt'),
+ (0.0915447622745347, 'koi_fpflag_ss'),
+ (0.07726876177409739, 'koi_prad'),
+ (0.05875729241961384, 'koi_depth'),
+ (0.04516735002354128, 'koi_fpflag_ec'),
+ (0.04304546397566277, 'koi_period'),
+ (0.040009125085465745, 'koi_impact'),
+ (0.03532765783277762, 'koi_insol'),
+ (0.03380339718467675, 'koi_duration'),
+ (0.032739766491384104, 'koi_teq'),
+ (0.02982284312610452, 'koi_time0bk'),
+ (0.022186014651161417, 'koi_steff'),
+ (0.021848015118463553, 'koi_slogg'),
+ (0.021115668297691344, 'ra'),
+ (0.021061994393262347, 'koi_srad'),
+ (0.02007285570501833, 'koi_kepmag'),
+ (0.018893135895072615, 'dec'),
+ (0.008045742605586175, 'koi_tce_plnt_num')]
